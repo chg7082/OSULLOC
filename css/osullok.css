@@ -1,0 +1,261 @@
+*{margin:0; padding:0;}
+.warp{width:100%;}
+.center_box{width:1280px; margin:0 auto;}
+li{list-style:none;}
+a{text-decoration:none; color: black; display:block; }
+img{width:100%;}
+
+/* body에 가로스크롤을 없앰 */
+html, body{overflow-x: hidden;}
+
+header, section, footer{width:100%; float:left;}
+header, section, footer, div{box-sizing:border-box;}
+header{height:140px; border-bottom:1px solid #ddd; z-index:100; position: relative;}
+
+
+
+/* 폰트 */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* 로그인 부분 */
+header .top{width:100%; float:left;}
+header .navi{width: 100%; float:left;}
+header .login{margin-right:40px;}
+header .login .user{float:right;}
+header .login .user ul li{float:left;}
+header .login .user ul li a{float:left; padding:5px 10px; font-size:14px; font-weight:bold; margin-top:5px; margin-bottom:13px; color:#999;}
+header .login .user ul li:hover a{text-decoration:underline;}
+header .login .user ul li:after{content:"|"; float:right; color:#999; margin-top:7px;}
+header .login .user ul li:last-child:after{content:"";}
+
+/* 헤더 로고부분 */
+header .navi .logo{float:left; width:200px; margin-top:20px; margin-left:40px;}
+
+/* 네비게이션 가운데 고정*/
+.navi nav{position:absolute; left:50%; transform:translateX(-50%); margin-top:25px;}
+
+/*주메뉴*/
+nav > ul > li{float:left;}
+nav > ul > li > a{display:block; text-align:center; padding:5px 80px; font-weight:bold; color:black; font-size:20px;}
+nav > ul > li:hover a{color:#4eae48;}
+
+/*서브메뉴*/
+nav ul li ul{padding:20px; display: none;}
+nav ul li ul li{margin-top:5px; }
+nav ul li .sub{background-color: #4eae48; border-top-left-radius:20px; border-top-right-radius:20px; border-bottom-left-radius:20px; border-bottom-right-radius:20px;}
+nav ul li ul a{font-size:17px; text-align:center;  display:block; padding:5px; font-weight:bold;}
+nav ul li ul.sub li a {color: black; padding:7px; }
+nav ul li ul.sub li:hover a{font-weight:bold; color:white;}
+
+/* 주메뉴에 마우스 오버하면 서브메뉴가 나타남 */
+nav > ul > li:hover ul {display: block;}
+
+/* kr버튼과 햄버거 메뉴*/
+header .navi .right_menu{float:right; margin-top:30px;}
+header .navi .right_menu > div{float: left;}
+header .navi .right_menu .lang > a{padding:0 20px; font-weight: bold; color: #006b25;}
+header .navi .right_menu .lang{float:left; margin-right:30px;}
+header .navi .right_menu .lang span{width: 7px; display: block; float: right;  margin-left: 5px;}
+header .navi .right_menu .lang .lang_sub{padding: 20px; border-radius: 20px; color: #111; margin-top: 10px; width: 60px; margin-left: 5px; display: none; 
+                                         background-color: #006b25;}
+header .navi .right_menu .lang .lang_sub li a{color: #ccc; padding: 5px 0; font-size: bold;}
+header .navi .right_menu .lang .lang_sub li a.active{color: #fff;}
+
+
+
+
+
+header .navi .right_menu .ham{float:right; margin-right:50px; margin-bottom:40px;}
+
+/* 메인 배너 */
+section .text{float: left; margin-top:30px;}
+section .text h1{font-size:30px; color: #4eae48;}
+section .text p{margin-top:20px; font-size:15px; color: #656565;}
+section .text b{margin-top:50px; display:block;}
+section .text b i{font-style:normal; float:left; font-size:18px;}
+section .text b span{display:block; width:15px; float:left; margin-top:6px; margin-left:10px;}
+section .tea{float:right; margin-top:30px;}
+
+/* 메인 슬라이드 영역 */
+section .visual_slide{margin-top:40px; height:400px; width:100%; float: left; text-align: center;}
+section .visual_slide .swiper{overflow: visible;} /* visible 히든의 반대 */
+
+/* swiper slide button */
+section .visual_slide .swiper-button-next{right: 580px; background-image:url(../img/hb_right.png); width:92px; height:92px; background-size: cover; opacity:1.0;}
+section .visual_slide .swiper-button-next:after{content: "";}
+
+section .visual_slide .swiper-button-prev{left: 580px; background-image:url(../img/hb_left.png); width: 92px; height:92px; background-size: cover; opacity:1.0;}
+section .visual_slide .swiper-button-prev:after{content: "";}
+
+/* swiper slide paginaton 슬라이드의 동그란 버튼 */
+section .visual_slide .swiper-pagination{bottom: -30px;}
+section .visual_slide .swiper-pagination-bullet{width: 14px; height: 14px;}
+section .visual_slide .swiper-pagination-bullet-active{background-color: #006b25;}
+
+/* 베스트상품 슬라이드 영역*/
+.best{margin-top:200px;}
+.best h1{text-align: center; margin-bottom:80px; font-size: 35px; color: #4eae48;}
+.best .center_box{width: 1280px;}
+.best .best_item{width: 1280px; height:400px; position: relative;}
+.best .swiper{width: 1200px; margin: 0 auto;}
+.best .swiper .swiper-slide{border-radius: 20px; box-sizing: border-box; padding:0; transition: all 0.5s; height: 340px;}
+.best .swiper .swiper-slide .over{width: 100%; height: 100%; box-sizing: border-box; padding: 40px 0; text-align: center; 
+                                  background-color: #fff; border-radius: 20px; border:1px solid#ececec; }
+.best .swiper .swiper-slide img{width: 150px; height: 150px;}
+.best .swiper .swiper-slide h3{margin-top: 10px; margin-bottom: 10px; font-size: 17px; color: #4eae48; font-weight: bold;}
+.best .swiper .swiper-slide p{font-size: 14px;}
+
+section .best_item .swiper-button-next{right:-1px; background-image:url(../img/bi_right.png); width: 25px; height: 25px; background-size: cover;}
+section .best_item .swiper-button-next:after{content: "";}
+
+section .best_item .swiper-button-prev{left:-1px; background-image:url(../img/bi_left.png); width: 25px; height: 25px; background-size: cover;}
+section .best_item .swiper-button-prev:after{content: "";}
+
+section .best_item .swiper-pagination{bottom:30px;}
+section .best_item .swiper-pagination-bullet{width: 10px; height: 10px;}
+section .best_item .swiper-pagination-bullet-active{background-color: #006b25;}
+
+/* 테두리에 마우스 오버 효과 주기 (그라데이션)*/
+.best .swiper .swiper-slide:hover{border:none; padding:6px; background:linear-gradient(to top right, #b8fb9b, #79c812);}
+
+/* 정기배송 서비스 */
+.quick{margin-top:200px;}
+.quick .quick_service{width:100%; height:220px; background-color:#eaed99;background-image: url(../img/quik_survice.png); background-position:650px 16px; background-repeat: no-repeat;
+                      background-size:25%; border-radius:20px; padding:40px;}
+.quick .quick_service .quick_text {float: left; margin-top:25px; margin-left:50px;}       
+.quick .quick_service .quick_text h1{font-size:30px; color: #4eae48;}
+.quick .quick_service .quick_text p{margin-top:20px; font-size:15px; color: #656565; }
+.quick .quick_btn{float:right; background-color:#50af48; border-radius:20px; width:185px; height:45px; padding:10px 10px; text-align:center;margin-top:30px;}
+.quick .quick_btn b{font-size:18px; color: white; font-weight:bold;}
+
+/* 상품검색 배너 */
+.find{margin-top:200px;}
+.find .center_box .find_1{float: left; margin-top:25px;}
+.find .center_box .find_1 h1{font-size:35px; color: #4eae48; margin-bottom:10px;}
+.find .center_box .find_1 p{font-size:15px; }
+.find .center_box .search_box{width:450px; border-bottom:5px solid #4eae48; margin-top:70px;}
+.find .center_box .search_box input{width:370px; padding:10px; border:none; font-size:20px; background-color:transparent; padding:20px 0;}
+.find .center_box .search_box input:focus{outline: none; }
+.find .center_box .search_box button{float:right; background-color: transparent; border: none; margin-top:10px;}
+.find .center_box .find_box{float: right; position: relative;}
+.find .center_box .find_box div{position: absolute; filter: drop-shadow(1px 1px 10px #d9d9d9);}
+.find .center_box .find_box .find1{width: 200px; height: 70px; right:300px;}
+.find .center_box .find_box .find2{width: 200px; height: 70px; top:94px; right: 250px;}
+.find .center_box .find_box .find3{width: 200px; height: 70px; top:195px; right: 400px;}
+.find .center_box .find_box .find4{width: 140px; height: 50px; top:260px; right: 230px;}
+.find .center_box .find_box .find5{width: 140px; height: 50px; top:50px; right: 35px;}
+.find .center_box .find_box .find6{width: 170px; height: 50px; top:180px; right: 50px;}
+.find .center_box .find_box .find7{width: 110px; height: 50px; top:245px; right: 0.5px; }
+.find .center_box .find_box .story_img_over2{transition:all 0.1s;}
+.find .center_box .find_box div:hover .story_img_over2{transform:scale(1.2,1.2);}
+
+
+/* 맴버쉽 혜택과 자주찾는 질문 */
+.custom{margin-top: 200px;}
+.custom .center_box > div{float: left; padding:20px; cursor: pointer; position: relative;}
+.custom .center_box div h1{color:white; font-size:30px;line-height:20px; margin-top:20px; margin-left:30px;}
+.custom .center_box div p{color: white; font-size:17px; line-height:20px; margin-top:20px; margin-left:30px; font-size:bold;}
+
+/* 맴버쉽 마진 */
+.custom .center_box .membership{width: 630px; height:300px; border-radius:30px; background-color:#019159; float:left;}
+.custom .center_box .membership{margin-right:20px;}
+.custom .center_box .membership:hover h1{color: #00824f;}
+.custom .center_box .membership:hover p{color: #00824f;}
+.custom .center_box .membership:hover{background: linear-gradient(to bottom left, #41b286, #a0ff87);}
+.custom .center_box .membership .costom_img{float: right; }
+
+/* 자주찾는 질문 */
+.custom .center_box .question{width: 630px; height:300px; border-radius:30px; background-color:#c0bc3e; float:left;}
+.custom .center_box .question:hover h1{color: #928e00;}
+.custom .center_box .question:hover p{color: #928e00;}
+.custom .center_box .question:hover{background: linear-gradient(to bottom left, #dfd92f, #98ed85);}
+.custom .center_box .question .costom_img{float: right;}
+
+/* 화살표 애니메이션(맴버쉽과 자주찾는 질문 공용 */
+.custom .center_box div .arrow{position:absolute; left:55px; bottom:0px; width:20px; height:15px; cursor:pointer; 
+                              transition:all 0.5s; margin-bottom:50px;} 
+                              /* 맴버쉽과 커스텀이 부모 부모객체 기준으로 왼쪽위치0 아래쪽위치 0 width와 heigt는 화살표의 가로 세로 길이
+                              트랜지션은 0.5초 동안 화살표가 늘어나는 애니메이션 */
+.custom .center_box div .arrow i{overflow:hidden; display:inline-block; border:0; width:1px; height:1px; clip:rect(1px, 1px, 1px, 1px); clip-path:inset(50%);}
+.custom .center_box > div:hover .arrow{width:150px;}
+
+/* 화살표 꼬리부분 */
+.custom .center_box div .arrow:before{content:""; position:absolute; left:0; top:50%; width:100%; border-bottom:3px solid white; transform:translateY(-50%);}
+
+/* 화살표 머리부분 */
+.custom .center_box div .arrow:after{content:""; position:absolute; right:0; top:50%; width:10px; height:10px; border-right:3px solid white; border-top:3px solid white;
+                                     transform:translateY(-50%) rotate(45deg); display:block;}
+
+/* 매장검색 */
+.store{margin-top:200px;}
+.store .center_box .find_1{float: left; margin-top:90px;}
+.store .center_box .find_1 h1{font-size:35px; color: #4eae48; margin-bottom:30px;}
+.store .center_box .find_1 p{font-size:15px; }
+.store .center_box .search_box{width:450px; border-bottom:5px solid #4eae48; margin-top:70px;}
+.store .center_box .search_box input{width:370px; padding:10px; border:none; font-size:20px; background-color:transparent; padding:20px 0;}
+.store .center_box .search_box input:focus{outline: none;}
+.store .center_box .search_box button{float:right; background-color: transparent; border: none; margin-top:10px;}
+.store .center_box .find_box{float: right; position: relative;}
+.store .center_box .find_box .find{position:absolute;}
+
+/* 스토리 박스 */
+.story{margin-top:200px;}
+.story .center_box .story_box{width:1000px; height:1000px; position: relative; margin:0 auto;} /* 포지션 릴리티브 div 4개가 부모객체 기준으로 배치 */
+.story .center_box .story_box h1{font-size:60px; color:#4eae48;}
+.story .center_box .story_box p{font-size:15px; line-height:30px;}
+.story .center_box .story_box h2{color:#4eae48; font-size:30px;}
+.story .center_box .story_box div{width: 500px; height:500px; position: absolute;} /* 포지션 앱솔루트 .story_img_over가 부모객체 기준으로 배치 자기자신 div를 겹쳐서 배치*/
+.story .center_box .story_box .story_txt{top:150px; left:0;}
+.story .center_box .story_box .story1{top:600px; left:523px;}
+.story .center_box .story_box .story_img1{top:0; left:520px;}
+.story .center_box .story_box .story_img2{top:500px; left:0;}
+.story .center_box .story_box .story_txt2{bottom:80px; right:0; top:650px; left:523px;}
+
+/* 스토리박스 이미지 확대 애니메이션 */
+.story .center_box .story_box .story_img_over{transition:all 0.5s;}
+.story .center_box .story_box div:hover .story_img_over{transform:scale(1.1,1.1);}
+
+/* 하단 슬라이드 영역 */
+.f_slide{width:100%; height:1450px; margin-top:200px;}
+.f_slide .swiper-slide{background-position: center; background-repeat: cover; background-repeat: no-repeat; height: 1450px;}
+.f_slide .fs1{background-image: url(../img/big_banner.png);}
+.f_slide .fs2{background-image: url(../img/big_banner2.png);}
+.f_slide .fs3{background-image: url(../img/big_banner3.png);}
+.f_slide .fs4{background-image: url(../img/big_banner4.png);}
+
+
+.f_slide .swiper-pagination-bullet{width: 14px; height: 14px;}
+.f_slide .swiper-pagination-bullet-active{background-color: #006b25;}
+
+/* 푸터 */
+footer{width:100%; padding:80px 0; background-color: #d4d4d4;}
+footer .center_box .f_left{float: left;}
+footer .center_box .f_right{float: right;}
+footer .center_box .f_left .f_logo{width:200px; margin-bottom:30px;}
+footer .center_box address{font-style: normal; font-size:14px; line-height:22px; color:#848585; font-weight: bold;}
+
+footer .center_box .sns{margin-top:30px;}
+footer .center_box .sns ul li{float:left; margin-right: 15px;}
+footer .center_box .f_right .quick_menu{margin-right:40px;}
+footer .center_box .f_right div{float: left; margin-left:10px;}
+footer .center_box .f_right div ul{float: left; padding-right:70px;}
+footer .center_box .f_right div h3{color:#4eae48; font-size:20px; margin-bottom:30px; font-weight: bold;}
+footer .center_box .f_right div ul li a{padding-right: 10px; font-size:15px; color:#848585; margin-bottom:10px;}
+
+/* 햄버거 메뉴를 클릭하면 나타나는 팝업 메뉴 */
+.popup{position: absolute; z-index: 1000; width: 100%; height: 100%; border-top: 3px solid #4eae48; background-color: #fff; padding: 20px; 
+        box-sizing: border-box; display: none;}
+.popup .close_btn{width: 40px; float: right;}
+.popup > ul{padding: 80px 200px;}
+.popup > ul > li{margin: 30px 50px; display: inline-table; width: 200px;}
+.popup > ul > li > a{font-size: 30px; font-weight: bold; color: #006b25; margin-bottom: 10px;}
+.popup ul li ul li a{padding:10px 0px; font-size: 17px; color: #525252;}
+
+
+/* top 버튼 */
+.top2{position: fixed; bottom: 20px; right: 20px; height:20px; border-radius: 10px;  width: 60px; height: 60px; color: #fff; line-height: 60ox;
+      font-size: 14px; cursor: pointer; z-index: 500;}
